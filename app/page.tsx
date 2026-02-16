@@ -33,7 +33,7 @@ export default function Home() {
         {/* Logo */}
         <div className="mb-6 flex justify-center">
           <Image 
-            src="/logo.png" 
+            src="/logo_v2.png" 
             alt="Logo NexaCard" 
             width={200} 
             height={60}
