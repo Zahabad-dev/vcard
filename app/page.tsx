@@ -42,7 +42,7 @@ export default function Home() {
           />
         </div>
         
-        <h1 className="text-6xl font-black mb-3" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>
+        <h1 className="text-6xl font-black mb-3" style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}>
           <span style={{ color: '#FFC700' }}>Nexa</span>
           <span style={{ color: '#000000' }}>Card</span>
         </h1>
@@ -59,7 +59,7 @@ export default function Home() {
         {/* Botón anterior */}
         <button
           onClick={handlePrevious}
-          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-16 z-10 bg-white p-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 text-indigo-600 hover:bg-indigo-50"
+          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-16 z-10 bg-white p-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 text-yellow-500 hover:bg-yellow-50"
           aria-label="Tarjeta anterior"
         >
           <FaChevronLeft className="text-2xl" />
@@ -73,7 +73,7 @@ export default function Home() {
         {/* Botón siguiente */}
         <button
           onClick={handleNext}
-          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-16 z-10 bg-white p-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 text-indigo-600 hover:bg-indigo-50"
+          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-16 z-10 bg-white p-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 text-yellow-500 hover:bg-yellow-50"
           aria-label="Tarjeta siguiente"
         >
           <FaChevronRight className="text-2xl" />
@@ -88,8 +88,8 @@ export default function Home() {
             onClick={() => handleDotClick(index)}
             className={`transition-all duration-300 rounded-full ${
               index === currentIndex
-                ? 'w-12 h-3 bg-gradient-to-r from-indigo-600 to-purple-600'
-                : 'w-3 h-3 bg-gray-300 hover:bg-indigo-400'
+                ? 'w-12 h-3 bg-yellow-500'
+                : 'w-3 h-3 bg-gray-300 hover:bg-yellow-400'
             }`}
             aria-label={`Ir a tarjeta ${index + 1}`}
           />
@@ -128,12 +128,12 @@ export default function Home() {
               target="_blank"
               className={`group relative bg-white rounded-xl p-4 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 ${
                 index === currentIndex 
-                  ? 'ring-2 ring-indigo-600 bg-gradient-to-br from-indigo-50 to-purple-50' 
+                  ? 'ring-2 ring-yellow-500 bg-yellow-50' 
                   : ''
               }`}
             >
               <div className="text-center">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform bg-gradient-to-r from-indigo-500 to-purple-500">
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform bg-yellow-500">
                   <span className="text-white font-bold text-lg">{card.id}</span>
                 </div>
                 <h3 className="font-semibold text-gray-800 text-sm mb-1 line-clamp-2">
@@ -142,27 +142,19 @@ export default function Home() {
                 <p className="text-xs text-gray-500 line-clamp-2 mb-2">
                   {card.especialidad}
                 </p>
-                <div className="flex items-center justify-center gap-1 text-indigo-600 text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="flex items-center justify-center gap-1 text-yellow-500 text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
                   <span>Ver Demo</span>
                   <FaExternalLinkAlt className="text-xs" />
                 </div>
               </div>
               
               {index === currentIndex && (
-                <div className="absolute -top-2 -right-2 bg-indigo-600 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg">
+                <div className="absolute -top-2 -right-2 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg">
                   Actual
                 </div>
               )}
             </Link>
           ))}
-        </div>
-
-        {/* Nota informativa */}
-        <div className="mt-8 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-200">
-          <p className="text-center text-gray-700">
-            <span className="font-semibold text-indigo-600">💡 Tip:</span> Cada tarjeta se abre en su propia vista independiente, 
-            permitiendo que tus clientes vean exactamente cómo lucirá su tarjeta digital en un ambiente real.
-          </p>
         </div>
       </div>
 

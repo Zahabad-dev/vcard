@@ -102,17 +102,17 @@ const getThemeConfig = (tema?: string) => {
       };
     case 'fotografo':
       return {
-        gradient: 'from-indigo-600 via-violet-500 to-purple-600',
-        bgPattern: 'bg-gradient-to-br from-indigo-50 to-violet-50',
-        primaryColor: 'indigo-600',
-        secondaryColor: 'violet-500',
+        gradient: 'from-yellow-500 via-amber-500 to-orange-500',
+        bgPattern: 'bg-gradient-to-br from-yellow-50 to-amber-50',
+        primaryColor: 'yellow-600',
+        secondaryColor: 'amber-500',
         icon: FaCamera,
-        accentBg: 'bg-indigo-100',
-        accentBorder: 'border-indigo-300',
-        accentText: 'text-indigo-700',
-        buttonGradient1: 'from-indigo-600 to-violet-600',
-        buttonGradient2: 'from-violet-600 to-purple-600',
-        shadow: 'shadow-indigo-200'
+        accentBg: 'bg-yellow-100',
+        accentBorder: 'border-yellow-300',
+        accentText: 'text-yellow-700',
+        buttonGradient1: 'from-yellow-500 to-amber-500',
+        buttonGradient2: 'from-amber-500 to-orange-500',
+        shadow: 'shadow-yellow-200'
       };
     case 'doctor':
       return {
