@@ -18,17 +18,17 @@ const getThemeConfig = (tema?: string) => {
   switch (tema) {
     case 'barbero':
       return {
-        gradient: 'from-amber-800 via-amber-600 to-yellow-700',
-        bgPattern: 'bg-gradient-to-br from-amber-50 to-yellow-50',
-        primaryColor: 'amber-700',
-        secondaryColor: 'yellow-600',
+        gradient: 'from-gray-900 via-gray-800 to-amber-900',
+        bgPattern: 'bg-gradient-to-br from-stone-50 to-amber-50',
+        primaryColor: 'gray-900',
+        secondaryColor: 'amber-700',
         icon: FaCut,
-        accentBg: 'bg-amber-100',
-        accentBorder: 'border-amber-300',
-        accentText: 'text-amber-800',
-        buttonGradient1: 'from-amber-700 to-yellow-700',
-        buttonGradient2: 'from-yellow-700 to-amber-800',
-        shadow: 'shadow-amber-200'
+        accentBg: 'bg-amber-50',
+        accentBorder: 'border-gray-300',
+        accentText: 'text-gray-900',
+        buttonGradient1: 'from-gray-900 to-gray-800',
+        buttonGradient2: 'from-amber-800 to-amber-900',
+        shadow: 'shadow-gray-300'
       };
     case 'cocinero':
       return {
