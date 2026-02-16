@@ -209,17 +209,19 @@ const DigitalCard: React.FC<DigitalCardProps> = ({ data }) => {
         <div className="pt-14 sm:pt-16 pb-4 sm:pb-6 px-4 sm:px-6">
           {/* Nombre y especialidad */}
           <div className="text-center mb-3 sm:mb-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.1)' }}>
               {data.nombre}
             </h2>
-            <div className={`flex items-center justify-center gap-2 text-${theme.primaryColor} mb-1`}>
-              <IconComponent className="text-xs sm:text-sm" />
-              <p className="text-sm sm:text-base font-semibold">
-                {data.especialidad}
-              </p>
+            <div className="flex items-center justify-center gap-2 mb-1">
+              <div className={`flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r ${theme.buttonGradient1}`}>
+                <IconComponent className="text-xs sm:text-sm text-white" />
+                <p className="text-sm sm:text-base font-bold text-white">
+                  {data.especialidad}
+                </p>
+              </div>
             </div>
             {data.empresa && (
-              <p className="text-xs sm:text-sm text-gray-600">
+              <p className="text-xs sm:text-sm font-semibold text-gray-700" style={{ textShadow: '0 1px 1px rgba(0,0,0,0.08)' }}>
                 {data.empresa}
               </p>
             )}
