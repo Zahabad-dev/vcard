@@ -5,9 +5,13 @@ import Link from 'next/link';
 import DigitalCard from '@/components/DigitalCard';
 import { cardsData } from '@/data/cardsData';
 import { FaChevronLeft, FaChevronRight, FaExternalLinkAlt } from 'react-icons/fa';
+import { useVisitTracker } from '@/hooks/useVisitTracker';
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  
+  // Registrar visita a la página principal
+  useVisitTracker('home');
 
   const handlePrevious = () => {
     setCurrentIndex((prev) => (prev === 0 ? cardsData.length - 1 : prev - 1));

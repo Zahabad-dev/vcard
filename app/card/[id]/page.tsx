@@ -3,6 +3,7 @@
 import React from 'react';
 import DigitalCard from '@/components/DigitalCard';
 import { cardsData } from '@/data/cardsData';
+import { useVisitTracker } from '@/hooks/useVisitTracker';
 
 interface PageProps {
   params: {
@@ -13,6 +14,9 @@ interface PageProps {
 export default function CardDetailPage({ params }: PageProps) {
   const cardId = parseInt(params.id);
   const card = cardsData.find((c) => c.id === cardId);
+  
+  // Registrar visita a esta tarjeta específica
+  useVisitTracker(`card-${params.id}`);
 
   if (!card) {
     return (
