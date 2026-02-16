@@ -185,6 +185,155 @@ const DigitalCard: React.FC<DigitalCardProps> = ({ data }) => {
     await shareCard(data);
   };
 
+  // Layout Version 2 - Diseño horizontal completamente diferente
+  if (data.layoutVersion === 2) {
+    return (
+      <div className="w-full max-w-2xl mx-auto">
+        <div className={`${theme.bgPattern} rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden ${theme.shadow}`}>
+          <div className="flex flex-col sm:flex-row">
+            {/* Columna izquierda - Foto y botones */}
+            <div className={`bg-gradient-to-br ${theme.gradient} p-6 sm:w-1/3 flex flex-col items-center justify-between`}>
+              <div className="w-full flex flex-col items-center">
+                {data.foto ? (
+                  <img 
+                    src={data.foto} 
+                    alt={data.nombre} 
+                    className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl object-cover shadow-xl border-4 border-white mb-4"
+                  />
+                ) : (
+                  <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-2xl bg-white flex items-center justify-center shadow-xl border-4 border-white mb-4">
+                    <IconComponent className={`text-5xl text-${theme.primaryColor}`} />
+                  </div>
+                )}
+                
+                <div className="text-center mb-4">
+                  <div className="bg-white/20 backdrop-blur-sm rounded-lg px-3 py-2 inline-flex items-center gap-2">
+                    <IconComponent className="text-lg text-white" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Botones verticales */}
+              <div className="w-full space-y-3 mt-4">
+                <button
+                  onClick={handleSaveContact}
+                  className="w-full bg-white text-gray-900 py-3 px-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-gray-100 transition-all duration-300 shadow-lg text-sm"
+                >
+                  <FaDownload className="text-sm" />
+                  <span>Guardar</span>
+                </button>
+                <button
+                  onClick={handleShare}
+                  className="w-full bg-white/90 text-gray-900 py-3 px-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-white transition-all duration-300 shadow-lg text-sm"
+                >
+                  <FaShare className="text-sm" />
+                  <span>Compartir</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Columna derecha - Información */}
+            <div className="p-6 sm:w-2/3">
+              {/* Nombre y especialidad */}
+              <div className="mb-4 pb-4 border-b-2 border-gray-200">
+                <h2 className="text-2xl sm:text-3xl font-black text-gray-900 mb-2">
+                  {data.nombre}
+                </h2>
+                <p className={`text-base sm:text-lg font-bold text-${theme.primaryColor} mb-1`}>
+                  {data.especialidad}
+                </p>
+                {data.empresa && (
+                  <p className="text-sm text-gray-600 font-semibold">
+                    {data.empresa}
+                  </p>
+                )}
+              </div>
+
+              {/* Información de contacto en grid */}
+              <div className="grid grid-cols-1 gap-3 mb-4">
+                <div className="flex items-start gap-3">
+                  <div className={`${theme.accentBg} p-2 rounded-lg flex-shrink-0`}>
+                    <FaEnvelope className={`text-${theme.primaryColor} text-sm`} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[10px] uppercase font-bold text-gray-500 mb-1">Email</p>
+                    <a 
+                      href={`mailto:${data.email}`}
+                      className={`text-sm text-gray-900 hover:text-${theme.primaryColor} transition-colors break-all`}
+                    >
+                      {data.email}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className={`${theme.accentBg} p-2 rounded-lg flex-shrink-0`}>
+                    <FaPhone className={`text-${theme.secondaryColor} text-sm`} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[10px] uppercase font-bold text-gray-500 mb-1">Teléfono</p>
+                    <a 
+                      href={`tel:${data.telefono}`}
+                      className={`text-sm text-gray-900 hover:text-${theme.secondaryColor} transition-colors`}
+                    >
+                      {data.telefono}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className={`${theme.accentBg} p-2 rounded-lg flex-shrink-0`}>
+                    <FaMapMarkerAlt className={`text-${theme.primaryColor} text-sm`} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-[10px] uppercase font-bold text-gray-500 mb-1">Dirección</p>
+                    {data.ubicacionMapa ? (
+                      <a 
+                        href={data.ubicacionMapa}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`text-sm text-gray-900 hover:text-${theme.primaryColor} transition-colors hover:underline`}
+                      >
+                        {data.direccion}
+                      </a>
+                    ) : (
+                      <p className="text-sm text-gray-900">
+                        {data.direccion}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* Certificaciones como pills */}
+              {data.certificaciones && data.certificaciones.length > 0 && (
+                <div className="mt-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <FaAward className={`text-${theme.primaryColor} text-sm`} />
+                    <h3 className={`text-xs font-black ${theme.accentText} uppercase tracking-wider`}>
+                      Certificaciones
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {data.certificaciones.map((cert, index) => (
+                      <div 
+                        key={index} 
+                        className={`${theme.accentBg} ${theme.accentBorder} border px-3 py-1.5 rounded-full text-xs text-gray-800 font-medium`}
+                      >
+                        {cert}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Layout Version 1 - Diseño original vertical
   return (
     <div className="w-full max-w-md mx-auto">
       <div className={`${theme.bgPattern} rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 ${theme.shadow}`}>

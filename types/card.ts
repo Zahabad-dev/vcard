@@ -11,4 +11,5 @@ export interface CardData {
   certificaciones?: string[];
   ubicacionMapa?: string;
   tema?: 'barbero' | 'cocinero' | 'pintor' | 'albanil' | 'arquitecto' | 'abogado' | 'fotografo' | 'doctor' | 'mecanico' | 'profesor';
+  layoutVersion?: 1 | 2;
 }

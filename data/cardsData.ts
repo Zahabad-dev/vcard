@@ -7,11 +7,12 @@ export const cardsData: CardData[] = [
     especialidad: 'Fotógrafa Profesional',
     email: 'ana.garcia@example.com',
     telefono: '+52 55 1234 5678',
-    direccion: 'Ciudad de México, CDMX',
+    direccion: 'Col. Centro Jardín la Floresta, a un lado de Vikingos',
     empresa: 'Ana García Photography',
     sitioWeb: 'https://anagarcia.photography',
     foto: 'https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=400&h=400&fit=crop&crop=center',
-    tema: 'fotografo'
+    tema: 'fotografo',
+    layoutVersion: 1
   },
   {
     id: 2,
@@ -30,7 +31,8 @@ export const cardsData: CardData[] = [
       'Curso Avanzado de Colorimetría Masculina',
       'Certificación en Afeitado Clásico con Navaja'
     ],
-    tema: 'barbero'
+    tema: 'barbero',
+    layoutVersion: 1
   },
   {
     id: 3,
@@ -38,7 +40,7 @@ export const cardsData: CardData[] = [
     especialidad: 'Chef Ejecutiva',
     email: 'maria.fernandez@example.com',
     telefono: '+52 81 3456 7890',
-    direccion: 'Monterrey, Nuevo León',
+    direccion: 'Col. Centro Jardín la Floresta, a un lado de Vikingos',
     empresa: 'Restaurante Sabor & Tradición',
     sitioWeb: 'https://mariaferchef.mx',
     foto: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=400&fit=crop&crop=center',
@@ -47,7 +49,8 @@ export const cardsData: CardData[] = [
       'Certificación en Repostería Internacional',
       'Especialización en Cocina Molecular'
     ],
-    tema: 'cocinero'
+    tema: 'cocinero',
+    layoutVersion: 1
   },
   {
     id: 4,
@@ -55,11 +58,12 @@ export const cardsData: CardData[] = [
     especialidad: 'Pintor & Artista Plástico',
     email: 'joseluis.hernandez@example.com',
     telefono: '+52 55 4567 8901',
-    direccion: 'Ciudad de México, CDMX',
+    direccion: 'Col. Centro Jardín la Floresta, a un lado de Vikingos',
     empresa: 'Taller de Arte JL Hernández',
     sitioWeb: 'https://jlhernandez.art',
     foto: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=400&h=400&fit=crop&crop=center',
-    tema: 'pintor'
+    tema: 'pintor',
+    layoutVersion: 1
   },
   {
     id: 5,
@@ -67,7 +71,7 @@ export const cardsData: CardData[] = [
     especialidad: 'Maestra de Obra & Construcción',
     email: 'laura.martinez@example.com',
     telefono: '+52 33 5678 9012',
-    direccion: 'Guadalajara, Jalisco',
+    direccion: 'Col. Centro Jardín la Floresta, a un lado de Vikingos',
     empresa: 'Construcciones Martínez',
     sitioWeb: 'https://lauramp.construccion',
     foto: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=400&fit=crop&crop=center',
@@ -76,7 +80,8 @@ export const cardsData: CardData[] = [
       'Curso de Seguridad Industrial',
       'Especialización en Acabados Finos'
     ],
-    tema: 'albanil'
+    tema: 'albanil',
+    layoutVersion: 1
   },
   {
     id: 6,
@@ -84,7 +89,7 @@ export const cardsData: CardData[] = [
     especialidad: 'Arquitecto',
     email: 'roberto.sanchez@example.com',
     telefono: '+52 81 6789 0123',
-    direccion: 'Monterrey, Nuevo León',
+    direccion: 'Col. Centro Jardín la Floresta, a un lado de Vikingos',
     empresa: 'Sánchez Arquitectos',
     sitioWeb: 'https://robertoarq.com',
     foto: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&h=400&fit=crop&crop=center',
@@ -93,7 +98,8 @@ export const cardsData: CardData[] = [
       'Maestría en Diseño Urbano',
       'Certificación LEED en Construcción Sustentable'
     ],
-    tema: 'arquitecto'
+    tema: 'arquitecto',
+    layoutVersion: 2
   },
   {
     id: 7,
@@ -101,7 +107,7 @@ export const cardsData: CardData[] = [
     especialidad: 'Abogada Corporativa',
     email: 'diana.ramirez@example.com',
     telefono: '+52 55 7890 1234',
-    direccion: 'Ciudad de México, CDMX',
+    direccion: 'Col. Centro Jardín la Floresta, a un lado de Vikingos',
     empresa: 'Bufete Ramírez & Asociados',
     sitioWeb: 'https://dianaramirez.legal',
     foto: 'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=400&h=400&fit=crop&crop=center',
@@ -110,7 +116,8 @@ export const cardsData: CardData[] = [
       'Especialización en Derecho Corporativo',
       'Maestría en Derecho Fiscal'
     ],
-    tema: 'abogado'
+    tema: 'abogado',
+    layoutVersion: 2
   },
   {
     id: 8,
@@ -118,7 +125,7 @@ export const cardsData: CardData[] = [
     especialidad: 'Médico Cirujano',
     email: 'miguel.morales@example.com',
     telefono: '+52 33 8901 2345',
-    direccion: 'Guadalajara, Jalisco',
+    direccion: 'Col. Centro Jardín la Floresta, a un lado de Vikingos',
     empresa: 'Clínica Morales',
     sitioWeb: 'https://drmorales.med',
     foto: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop&crop=center',
@@ -127,7 +134,8 @@ export const cardsData: CardData[] = [
       'Especialidad en Cirugía General',
       'Certificación del Consejo Mexicano de Cirugía'
     ],
-    tema: 'doctor'
+    tema: 'doctor',
+    layoutVersion: 2
   },
   {
     id: 9,
@@ -135,7 +143,7 @@ export const cardsData: CardData[] = [
     especialidad: 'Mecánica Automotriz',
     email: 'patricia.gonzalez@example.com',
     telefono: '+52 81 9012 3456',
-    direccion: 'Monterrey, Nuevo León',
+    direccion: 'Col. Centro Jardín la Floresta, a un lado de Vikingos',
     empresa: 'Taller Mecánico González',
     sitioWeb: 'https://tallergonzalez.mx',
     foto: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=400&h=400&fit=crop&crop=center',
@@ -144,7 +152,8 @@ export const cardsData: CardData[] = [
       'Especialización en Sistemas de Inyección',
       'Curso de Diagnóstico Electrónico'
     ],
-    tema: 'mecanico'
+    tema: 'mecanico',
+    layoutVersion: 2
   },
   {
     id: 10,
@@ -152,7 +161,7 @@ export const cardsData: CardData[] = [
     especialidad: 'Profesor de Matemáticas',
     email: 'fernando.jimenez@example.com',
     telefono: '+52 55 0123 4567',
-    direccion: 'Ciudad de México, CDMX',
+    direccion: 'Col. Centro Jardín la Floresta, a un lado de Vikingos',
     empresa: 'Instituto Educativo Jiménez',
     sitioWeb: 'https://fernandoprof.edu',
     foto: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&h=400&fit=crop&crop=center',
@@ -161,6 +170,7 @@ export const cardsData: CardData[] = [
       'Maestría en Educación',
       'Certificación en Pedagogía Moderna'
     ],
-    tema: 'profesor'
+    tema: 'profesor',
+    layoutVersion: 2
   }
 ];
