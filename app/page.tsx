@@ -41,8 +41,9 @@ export default function Home() {
           />
         </div>
         
-        <h1 className="text-5xl font-bold mb-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-          NexaCard
+        <h1 className="text-6xl font-black mb-3" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>
+          <span style={{ color: '#FFC700' }}>Nexa</span>
+          <span style={{ color: '#000000' }}>Card</span>
         </h1>
         <p className="text-gray-600 text-lg">
           Portafolio de Tarjetas Digitales de Contacto
