@@ -209,7 +209,7 @@ const DigitalCard: React.FC<DigitalCardProps> = ({ data }) => {
         <div className="pt-14 sm:pt-16 pb-4 sm:pb-6 px-4 sm:px-6">
           {/* Nombre y especialidad */}
           <div className="text-center mb-3 sm:mb-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-1">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1">
               {data.nombre}
             </h2>
             <div className={`flex items-center justify-center gap-2 text-${theme.primaryColor} mb-1`}>
@@ -219,7 +219,7 @@ const DigitalCard: React.FC<DigitalCardProps> = ({ data }) => {
               </p>
             </div>
             {data.empresa && (
-              <p className="text-xs sm:text-sm text-gray-500">
+              <p className="text-xs sm:text-sm text-gray-600">
                 {data.empresa}
               </p>
             )}
@@ -236,7 +236,7 @@ const DigitalCard: React.FC<DigitalCardProps> = ({ data }) => {
               </div>
               <ul className="space-y-1">
                 {data.certificaciones.map((cert, index) => (
-                  <li key={index} className="text-[10px] sm:text-xs text-gray-700 flex items-start gap-1 sm:gap-2">
+                  <li key={index} className="text-[10px] sm:text-xs text-gray-800 flex items-start gap-1 sm:gap-2">
                     <span className={`text-${theme.primaryColor} mt-0.5`}>✓</span>
                     <span>{cert}</span>
                   </li>
@@ -248,15 +248,15 @@ const DigitalCard: React.FC<DigitalCardProps> = ({ data }) => {
           {/* Información de contacto */}
           <div className="space-y-2 sm:space-y-3 mb-3 sm:mb-4">
             {/* Email */}
-            <div className="flex items-center gap-2 sm:gap-3 text-gray-700">
+            <div className="flex items-center gap-2 sm:gap-3 text-gray-800">
               <div className={`w-8 h-8 sm:w-9 sm:h-9 ${theme.accentBg} rounded-full flex items-center justify-center flex-shrink-0`}>
                 <FaEnvelope className={`text-xs sm:text-sm text-${theme.primaryColor}`} />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-[10px] sm:text-xs text-gray-500 uppercase font-semibold">Email</p>
+                <p className="text-[10px] sm:text-xs text-gray-600 uppercase font-semibold">Email</p>
                 <a 
                   href={`mailto:${data.email}`}
-                  className={`text-xs sm:text-sm hover:text-${theme.primaryColor} transition-colors truncate block`}
+                  className={`text-xs sm:text-sm text-gray-900 hover:text-${theme.primaryColor} transition-colors truncate block`}
                 >
                   {data.email}
                 </a>
@@ -264,15 +264,15 @@ const DigitalCard: React.FC<DigitalCardProps> = ({ data }) => {
             </div>
 
             {/* Teléfono */}
-            <div className="flex items-center gap-2 sm:gap-3 text-gray-700">
+            <div className="flex items-center gap-2 sm:gap-3 text-gray-800">
               <div className={`w-8 h-8 sm:w-9 sm:h-9 ${theme.accentBg} rounded-full flex items-center justify-center flex-shrink-0`}>
                 <FaPhone className={`text-xs sm:text-sm text-${theme.secondaryColor}`} />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-[10px] sm:text-xs text-gray-500 uppercase font-semibold">Teléfono</p>
+                <p className="text-[10px] sm:text-xs text-gray-600 uppercase font-semibold">Teléfono</p>
                 <a 
                   href={`tel:${data.telefono}`}
-                  className={`text-xs sm:text-sm hover:text-${theme.secondaryColor} transition-colors truncate block`}
+                  className={`text-xs sm:text-sm text-gray-900 hover:text-${theme.secondaryColor} transition-colors truncate block`}
                 >
                   {data.telefono}
                 </a>
@@ -280,23 +280,23 @@ const DigitalCard: React.FC<DigitalCardProps> = ({ data }) => {
             </div>
 
             {/* Dirección */}
-            <div className="flex items-center gap-2 sm:gap-3 text-gray-700">
+            <div className="flex items-center gap-2 sm:gap-3 text-gray-800">
               <div className={`w-8 h-8 sm:w-9 sm:h-9 ${theme.accentBg} rounded-full flex items-center justify-center flex-shrink-0`}>
                 <FaMapMarkerAlt className={`text-xs sm:text-sm text-${theme.primaryColor}`} />
               </div>
               <div className="flex-1 min-w-0">
-                <p className="text-[10px] sm:text-xs text-gray-500 uppercase font-semibold">Dirección</p>
+                <p className="text-[10px] sm:text-xs text-gray-600 uppercase font-semibold">Dirección</p>
                 {data.ubicacionMapa ? (
                   <a 
                     href={data.ubicacionMapa}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`text-xs sm:text-sm hover:text-${theme.primaryColor} transition-colors truncate block hover:underline cursor-pointer`}
+                    className={`text-xs sm:text-sm text-gray-900 hover:text-${theme.primaryColor} transition-colors truncate block hover:underline cursor-pointer`}
                   >
                     {data.direccion}
                   </a>
                 ) : (
-                  <p className="text-xs sm:text-sm truncate">
+                  <p className="text-xs sm:text-sm text-gray-900 truncate">
                     {data.direccion}
                   </p>
                 )}

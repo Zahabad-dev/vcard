@@ -138,7 +138,7 @@ export const cardsData: CardData[] = [
     direccion: 'Monterrey, Nuevo León',
     empresa: 'Taller Mecánico González',
     sitioWeb: 'https://tallergonzalez.mx',
-    foto: 'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=400&h=400&fit=crop&crop=center',
+    foto: 'https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=400&h=400&fit=crop&crop=center',
     certificaciones: [
       'Certificación en Mecánica Automotriz',
       'Especialización en Sistemas de Inyección',
