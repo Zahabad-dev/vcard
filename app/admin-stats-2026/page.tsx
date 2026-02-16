@@ -107,11 +107,12 @@ export default function AdminStats() {
           {/* Logo */}
           <div className="mb-6 flex justify-center">
             <Image 
-              src="/logo_v2.png" 
+              src="/logo_v2.png?v=2" 
               alt="Logo NexaCard" 
               width={200} 
               height={60}
               className="drop-shadow-lg hover:scale-105 transition-transform duration-300"
+              unoptimized
             />
           </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-3 bg-gradient-to-r from-purple-600 via-pink-600 to-rose-600 bg-clip-text text-transparent">

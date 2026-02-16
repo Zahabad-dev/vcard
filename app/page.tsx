@@ -33,11 +33,12 @@ export default function Home() {
         {/* Logo */}
         <div className="mb-6 flex justify-center">
           <Image 
-            src="/logo_v2.png" 
+            src="/logo_v2.png?v=2" 
             alt="Logo NexaCard" 
             width={200} 
             height={60}
             className="drop-shadow-lg hover:scale-105 transition-transform duration-300"
+            unoptimized
           />
         </div>
         
