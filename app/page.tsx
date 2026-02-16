@@ -31,7 +31,7 @@ export default function Home() {
       {/* Header */}
       <div className="text-center mb-8">
         {/* Logo */}
-        <div className="mb-6 flex justify-center">
+        <div className="mb-6 flex justify-center animate-fade-in-up">
           <Image 
             src="/logo_v2.png?v=2" 
             alt="Logo NexaCard" 
@@ -39,17 +39,18 @@ export default function Home() {
             height={60}
             className="drop-shadow-lg hover:scale-105 transition-transform duration-300"
             unoptimized
+            priority
           />
         </div>
         
-        <h1 className="text-6xl font-black mb-3" style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}>
+        <h1 className="text-6xl font-black mb-3 animate-fade-in-up animate-delay-100" style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}>
           <span style={{ color: '#FFC700' }}>Nexa</span>
           <span style={{ color: '#000000' }}>Card</span>
         </h1>
-        <p className="text-gray-600 text-lg">
+        <p className="text-gray-600 text-lg animate-fade-in animate-delay-200">
           Portafolio de Tarjetas Digitales de Contacto
         </p>
-        <p className="text-gray-500 text-sm mt-2">
+        <p className="text-gray-500 text-sm mt-2 animate-fade-in animate-delay-300">
           Explora {cardsData.length} diseños profesionales
         </p>
       </div>
