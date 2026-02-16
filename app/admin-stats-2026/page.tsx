@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { FaChartLine, FaCalendarDay, FaEye, FaClock, FaFileAlt } from 'react-icons/fa';
 
 interface Stats {
@@ -103,6 +104,16 @@ export default function AdminStats() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
+          {/* Logo */}
+          <div className="mb-6 flex justify-center">
+            <Image 
+              src="/logo.png" 
+              alt="Logo NexaCard" 
+              width={200} 
+              height={60}
+              className="drop-shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+          </div>
           <h1 className="text-4xl sm:text-5xl font-bold mb-3 bg-gradient-to-r from-purple-600 via-pink-600 to-rose-600 bg-clip-text text-transparent">
             Panel de Estadísticas
           </h1>

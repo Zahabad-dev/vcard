@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import DigitalCard from '@/components/DigitalCard';
 import { cardsData } from '@/data/cardsData';
 import { FaChevronLeft, FaChevronRight, FaExternalLinkAlt } from 'react-icons/fa';
@@ -29,6 +30,17 @@ export default function Home() {
     <main className="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-br from-slate-50 via-indigo-50 to-purple-50">
       {/* Header */}
       <div className="text-center mb-8">
+        {/* Logo */}
+        <div className="mb-6 flex justify-center">
+          <Image 
+            src="/logo.png" 
+            alt="Logo NexaCard" 
+            width={200} 
+            height={60}
+            className="drop-shadow-lg hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+        
         <h1 className="text-5xl font-bold mb-3 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
           NexaCard
         </h1>
